@@ -1,11 +1,10 @@
-package com.chenjiarun.xvolley.xvolleyexample;
+package com.chenjiarun.xvolley.net;
 
 
 import android.util.Log;
 
 import com.android.volley.Response;
-import com.chenjiarun.xvolley.net.BasicAPI;
-import com.chenjiarun.xvolley.net.BasicRequest;
+import com.chenjiarun.xvolley.app.VolleyApp;
 
 import org.json.JSONObject;
 
@@ -48,7 +47,7 @@ public abstract class BasicHttp implements Response.Listener<JSONObject>, Respon
 
         Log.e("XVolley", "[header] " + strHeader);
 
-        MyApp.getQueue().add(request);
+        VolleyApp.getQueue().add(request);
     }
 
 }

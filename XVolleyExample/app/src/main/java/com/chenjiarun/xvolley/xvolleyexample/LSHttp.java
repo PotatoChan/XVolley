@@ -3,6 +3,7 @@ package com.chenjiarun.xvolley.xvolleyexample;
 import android.util.Log;
 
 import com.android.volley.VolleyError;
+import com.chenjiarun.xvolley.net.BasicHttp;
 
 import org.json.JSONObject;
 
@@ -25,19 +26,20 @@ public class LSHttp extends BasicHttp {
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        api.requestFailure(APIStatus.SERVER_ERROR, APIStatus.SERVER_ERROR_INFO);
+        api.requestFailure(666L, "服务器繁忙,请稍后再试");
     }
 
     @Override
     public void onResponse(JSONObject response) {
 
         if (response == null) {
-            api.requestFailure(APIStatus.EMPTY_RETURN, APIStatus.EMPTY_RETURN_INFO);
+            api.requestFailure(601L, "response 没有返回");
             return;
         }
 
         Log.e("XVolley", "[result] " + response.toString());
 
+        api.requestSuccess(response, "");
     }
 
 }

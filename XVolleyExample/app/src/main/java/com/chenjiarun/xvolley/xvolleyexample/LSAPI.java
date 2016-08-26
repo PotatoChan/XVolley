@@ -17,7 +17,6 @@ public abstract class LSAPI extends BasicAPI {
     public LSAPI() {
         addHeader("apiToken", "213123DFSF#234SFF");
         addHeader("platform", "21");
-//        addHeader("Content-Type", "application/x-www-form-urlencoded");
     }
 
     @Override

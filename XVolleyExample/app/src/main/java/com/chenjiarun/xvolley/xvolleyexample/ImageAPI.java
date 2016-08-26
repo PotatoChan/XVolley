@@ -62,7 +62,7 @@ public class ImageAPI extends LSAPI {
 
     @Override
     public String getUrl() {
-        return "http://dev.image.goodsbull.com/image/app/v1/image/upload";
+        return "请填写实际请求的地址";
     }
 
 

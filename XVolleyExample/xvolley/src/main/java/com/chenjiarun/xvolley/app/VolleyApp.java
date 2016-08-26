@@ -1,4 +1,4 @@
-package com.chenjiarun.xvolley.xvolleyexample;
+package com.chenjiarun.xvolley.app;
 
 
 import com.android.volley.RequestQueue;
@@ -9,15 +9,15 @@ import com.chenjiarun.android.tools.app.App;
 /**
  * Created by Potato on 16/3/19.
  */
-public class MyApp extends App {
+public class VolleyApp extends App {
 
-    public static MyApp app;
+    public static VolleyApp app;
 
-    public static MyApp getApp() {
+    public static VolleyApp getApp() {
         if (app == null) {
             synchronized (App.class) {
                 if (app == null) {
-                    app = new MyApp();
+                    app = new VolleyApp();
                 }
             }
         }
